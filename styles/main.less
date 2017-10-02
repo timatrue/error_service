@@ -1,25 +1,54 @@
-@darkblue: #00008B;
-@border-color: #CCCCCC; //gray
+@darkblue: #3486db;
+@blue: #3498db;
+@white: white;
+@border-color: #CCCCCC;
 @base-font-size: 16px;
 
 body {
     font-size: @base-font-size;
-}
-
-header {
-  border-bottom: 1px solid @border-color;
+    font-family: 'Inconsolata','Helvetica', 'Arial', 'Sans-Serif', 'serif';
 }
 
 a {
   color: @darkblue;
 }
 
-#menu {
+.login-form #fld_submitLogin{
+    background-color: @blue;
+    border: none;
+    color: @white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    cursor: pointer;
+    &:hover {
+      background-color: @darkblue;
+    }
+}
+
+.header {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+  	border-bottom: 1px solid @border-color;
+  	.login-form__container div{
+	  	display: flex;
+	    flex-flow: row wrap;
+	    justify-content: flex-end;
+	    margin-bottom: 10px;
+  	}
+}
+
+.main-menu {
 	display: inline-flex;
 	ul {
     	list-style-type: none;
     	margin: 0;
     	padding: 0;
-    	width: 60px;
+    	li {
+    		display: inline;
+    		margin: 5px 2px;
+    	}
 	}
 }

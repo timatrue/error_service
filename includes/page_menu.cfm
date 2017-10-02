@@ -1,4 +1,4 @@
-<div id="menu">
+<div class="main-menu">
 	<ul>
 	  <li><a href="index.cfm">Home</a></li>
 	  <li><a href="add_error.cfm">Add error</a></li>

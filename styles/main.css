@@ -1,18 +1,44 @@
 body {
   font-size: 16px;
-}
-header {
-  border-bottom: 1px solid #CCCCCC;
+  font-family: 'Inconsolata', 'Helvetica', 'Arial', 'Sans-Serif', 'serif';
 }
 a {
-  color: #00008B;
+  color: #3486db;
 }
-#menu {
+.login-form #fld_submitLogin {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.login-form #fld_submitLogin:hover {
+  background-color: #3486db;
+}
+.header {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-bottom: 1px solid #CCCCCC;
+}
+.header .login-form__container div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.main-menu {
   display: inline-flex;
 }
-#menu ul {
+.main-menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 60px;
+}
+.main-menu ul li {
+  display: inline;
+  margin: 5px 2px;
 }
