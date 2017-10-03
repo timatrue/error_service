@@ -1,13 +1,11 @@
 @darkblue: #3486db;
 @blue: #3498db;
+@darkgrey: #6b6b6b;
+@mediumgrey: #696969;
+@lightgrey: #DDD;
 @white: white;
 @border-color: #CCCCCC;
 @base-font-size: 16px;
-
-body {
-    font-size: @base-font-size;
-    font-family: 'Inconsolata','Helvetica', 'Arial', 'Sans-Serif', 'serif';
-}
 
 a {
   color: @darkblue;
@@ -38,7 +36,12 @@ a {
 	    justify-content: flex-end;
 	    margin-bottom: 10px;
   	}
+  	.login-form__fieldset {
+  		color: @mediumgrey;
+		border:1px solid @blue;
+	}
 }
+
 
 .main-menu {
 	display: inline-flex;
@@ -50,5 +53,25 @@ a {
     		display: inline;
     		margin: 5px 2px;
     	}
+	}
+}
+
+body {
+	h1,h2,h3,h4{
+		color: @darkgrey;
+	}
+	font-size: @base-font-size;
+    font-family: 'Inconsolata','Helvetica', 'Arial', 'Sans-Serif', 'serif';
+	table {
+	    border-collapse: collapse;
+	    width: 100%;
+	}
+	td, th {
+	    border: 1px solid @lightgrey;
+	    text-align: left;
+	    padding: 8px;
+	}
+	tr:nth-child(even) {
+	    background-color: @lightgrey;
 	}
 }

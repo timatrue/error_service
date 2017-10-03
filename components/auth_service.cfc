@@ -30,7 +30,12 @@
 				<cfloginuser name="#loginUser.email#" password="#loginUser.password#" roles="#loginUser.role#" >
 			</cflogin>
 			<!---Save user's data into ssesion scope --->
-			<cfset session.loggedUser = {'userEmail' = loginUser.email, 'userID' = loginUser.id}>
+			<cfset session.loggedUser = {
+				'userEmail' = loginUser.email,
+				'userID' = loginUser.id,
+				'firstName' = loginUser.first_name,
+				'lastName' = loginUser.last_name
+				}>
 			<cfset var isUserLoggedIn = true>
 		</cfif>
 		<cfreturn isUserLoggedIn>

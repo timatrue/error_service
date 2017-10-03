@@ -9,7 +9,7 @@
 	</cfif>
 </cfif>
 <cfform class="login-form" preservedata="true">
-	<fieldset>
+	<fieldset class="login-form__fieldset">
     <legend>Login</legend>
     <cfif structKeyExists(variables,'errorMsg') AND NOT arrayIsEmpty(errorMsg)>
     	<cfoutput >
@@ -23,7 +23,7 @@
     </cfif>
     <cfif structKeyExists(session,'loggedUser')>
     	<span><cfoutput > Logged as  #session.loggedUser.userEmail# </cfoutput></span>
-    	<span><a href="">your profile</a> <a href="/error_service/index.cfm?logout">Logout</a></span>
+    	<span><a href="user_profile.cfm">your profile</a> <a href="/error_service/index.cfm?logout">Logout</a></span>
     	<!---<cfif isUserInRole('admin')>
 			<span><a href="">admin</a></span>
     	</cfif>--->
