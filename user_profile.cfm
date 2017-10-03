@@ -1,7 +1,6 @@
 <cfinclude template="includes/header.cfm" >
 <!---isUserLoggedIn Linked with native cflogin function--->
 <cfif isUserLoggedIn()>
-	<cfset session>
 	<h3>
 		<cfoutput>
 			Welcome on Board #session.loggedUser.lastName# #session.loggedUser.firstName#
