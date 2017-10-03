@@ -31,4 +31,45 @@ INSERT INTO errors (date_created, desc_short, desc_long, user_id, status, urgenc
 	(NOW(),'Form doesnt work','caused by script',1,'closed', 'urgently','not important'),
 	(NOW(),'Error in header','caused by script',2,'open', 'urgently','important'),
 	(NOW(),'HTML error','caused by script',1,'open', 'urgently','important');
-    
+
+CREATE TABLE status_list (
+    id TINYINT NOT NULL AUTO_INCREMENT,
+	status VARCHAR(10) NOT NULL,
+	PRIMARY KEY (id)
+);
+INSERT INTO status_list (status) VALUES ('New'),('Opened'),('Solved'),('Closed');
+
+CREATE TABLE urgency_list (
+    id TINYINT NOT NULL AUTO_INCREMENT,
+	urgency VARCHAR(20) NOT NULL,
+	PRIMARY KEY (id)
+);
+INSERT INTO urgency_list (urgency) VALUES ('Very urgent'),('Urgent'),('Not urgent'),('Easy pace');
+
+CREATE TABLE critical_list (
+    id TINYINT NOT NULL AUTO_INCREMENT,
+	criticality VARCHAR(20) NOT NULL,
+	PRIMARY KEY (id)
+);
+INSERT INTO critical_list (criticality) VALUES ('Emergency'),('Crucial'),('Not crucial'),('Changes requested');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
