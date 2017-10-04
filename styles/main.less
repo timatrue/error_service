@@ -8,6 +8,7 @@
 @red: #ff6666;
 @border-color: #CCCCCC;
 @base-font-size: 16px;
+@medium-font-size: 14px;
 @small-font-size: 12px;
 
 a {
@@ -15,10 +16,10 @@ a {
 }
 
 .header {
+	margin-top: 10px;
 	display: flex;
 	flex-flow: column;
 	align-items: center;
-  	border-bottom: 1px solid @border-color;
   	.login-form__container div{
 	  	display: flex;
 	    flex-flow: row wrap;
@@ -26,6 +27,7 @@ a {
 	    margin-bottom: 6px;
   	}
   	.login-form__fieldset {
+  		font-size: @medium-font-size;
   		color: @mediumgrey;
 		border:1px solid @blue;
 	}
@@ -45,6 +47,8 @@ a {
 }
 
 body {
+	width: 90%;
+	margin: auto;
 	h1,h2,h3,h4 {
 		color: @darkgrey;
 	}
