@@ -39,6 +39,14 @@ body h3,
 body h4 {
   color: #6b6b6b;
 }
+body .success {
+  color: #3498db;
+  font-size: 12px;
+}
+body .error {
+  color: #ff6666;
+  font-size: 12px;
+}
 body input[type=submit] {
   background-color: #3498db;
   border: none;
@@ -65,17 +73,40 @@ body th {
 body tr:nth-child(even) {
   background-color: #DDD;
 }
-body #error-container {
+body .edit-button {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 12px;
+  font-style: italic;
+  color: #696969;
+  cursor: pointer;
+}
+body .edit-button:hover {
+  color: #000;
+}
+body #error-container,
+body #user-container {
   display: flex;
   flex-flow: column;
   align-items: center;
 }
-body #error-container #error-form div {
+body #error-container #error-form div,
+body #user-container #error-form div,
+body #error-container #user-form div,
+body #user-container #user-form div {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
   margin-bottom: 6px;
 }
-body #error-container #error-form div select {
+body #error-container #error-form div select,
+body #user-container #error-form div select,
+body #error-container #user-form div select,
+body #user-container #user-form div select,
+body #error-container #error-form div textarea,
+body #user-container #error-form div textarea,
+body #error-container #user-form div textarea,
+body #user-container #user-form div textarea {
   min-width: 173px;
 }

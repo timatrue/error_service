@@ -23,7 +23,7 @@
     </cfif>
     <cfif structKeyExists(session,'loggedUser')>
     	<span><cfoutput > Logged as  #session.loggedUser.userEmail# </cfoutput></span>
-    	<span><a href="user_profile.cfm">your profile</a> <a href="/error_service/index.cfm?logout">Logout</a></span>
+    	<span><a href="user_profile.cfm">Your profile</a> <a href="/error_service/index.cfm?logout">Logout</a></span>
     	<!---<cfif isUserInRole('admin')>
 			<span><a href="">admin</a></span>
     	</cfif>--->

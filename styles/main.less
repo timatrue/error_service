@@ -4,8 +4,11 @@
 @mediumgrey: #696969;
 @lightgrey: #DDD;
 @white: white;
+@black: #000;
+@red: #ff6666;
 @border-color: #CCCCCC;
 @base-font-size: 16px;
+@small-font-size: 12px;
 
 a {
   color: @darkblue;
@@ -45,6 +48,14 @@ body {
 	h1,h2,h3,h4 {
 		color: @darkgrey;
 	}
+	.success {
+		color: @blue;
+		font-size: @small-font-size;
+	}
+	.error {
+		color: @red;
+		font-size: @small-font-size;
+	}
 	input[type=submit] {
 		background-color: @blue;
 	    border: none;
@@ -72,17 +83,29 @@ body {
 	tr:nth-child(even) {
 	    background-color: @lightgrey;
 	}
-	#error-container{
+	.edit-button{
+		padding: 0;
+		border: none;
+		background: none;
+		font-size: @small-font-size;
+		font-style: italic;
+		color: @mediumgrey;
+		cursor: pointer;
+		&:hover {
+			color: @black;
+		}
+	}
+	#error-container,#user-container{
 		display: flex;
 		flex-flow: column;
 		align-items: center;
-		#error-form {
+		#error-form,#user-form {
 			div {
 				display: flex;
 			    flex-flow: row wrap;
 			    justify-content: flex-end;
 			    margin-bottom: 6px;
-			    select {
+			    select, textarea {
 			    	min-width: 173px;
 			    }
 			}
