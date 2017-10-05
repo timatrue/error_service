@@ -24,6 +24,16 @@
 					criticality = '#form.fld_criticality#'
 					WHERE error_id = #url.error#
 				</cfquery>
+				<cfquery datasource="error_service" >
+					INSERT INTO errors_history
+					(error_id, date_created, desc_short, desc_long, user_id, status, urgency, criticality)
+					VALUES
+					('#url.error#', '#session.saved_error.date_created#',
+					'#session.saved_error.desc_short#', '#session.saved_error.desc_long#',
+					'#session.loggedUser.userID#', '#session.saved_error.status#',
+					'#session.saved_error.urgency#', '#session.saved_error.criticality#')
+				</cfquery>
+				<cfset structClear(session.saved_error)>
 				<cfset variables.errorFormEditComplete = true>
 				<cflocation url="/error_service/error_list.cfm" >
 			</cfif>
@@ -33,6 +43,9 @@
 		<cfset errorNumber="#url.error#">
 		<cfquery datasource="error_service" name="error_details">
 			SELECT * FROM errors WHERE error_id = #errorNumber#;
+		</cfquery>
+		<cfquery datasource="error_service" name="error_history">
+			SELECT * FROM errors_history WHERE error_id = #errorNumber#;
 		</cfquery>
 		<cfquery datasource="error_service" name="status_list">
 			SELECT status
@@ -48,6 +61,17 @@
  				st_closed = 1;
 			</cfif>
 		</cfquery>
+	
+		<cfset session.saved_error = {
+			date_created = error_details.date_created,
+			desc_short = error_details.desc_short,
+			desc_long = error_details.desc_long,
+			user_id =  error_details.user_id,
+			status = error_details.status,
+			urgency = error_details.urgency,
+			criticality = error_details.criticality
+		} >
+
 		<cfquery datasource="error_service" name="urgency_list">
 			SELECT urgency FROM urgency_list;
 		</cfquery>
@@ -85,6 +109,12 @@
 			</cfform>
 		</div>
 	</cfif>
+	<cfif error_history.RecordCount EQ 0>
+     	<p style="text-align:center;"> Error doesn't have history</p>
+ 	<cfelse>
+     	<h4>Error's history':</h4>
+		<cfinclude template="includes/error_table_history.cfm" >
+    </cfif>
 	<cfset variables.errorFormEditComplete = false>  
 <cfelse>
 	<cflocation url="/error_service/index.cfm?noaccess" >

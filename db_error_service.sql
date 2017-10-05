@@ -32,6 +32,21 @@ INSERT INTO errors (date_created, desc_short, desc_long, user_id, status, urgenc
 	(NOW(),'Error in header','caused by script',2,'open', 'urgently','important'),
 	(NOW(),'HTML error','caused by script',1,'open', 'urgently','important');
 
+CREATE TABLE errors_history (
+	history_id int NOT NULL AUTO_INCREMENT,
+    error_id int NOT NULL,
+	date_created DATE NOT NULL,
+    desc_short VARCHAR(100) NOT NULL,
+	desc_long VARCHAR(300) NOT NULL,
+	user_id int NOT NULL,
+	status VARCHAR(20) NOT NULL,
+    urgency VARCHAR(20) NOT NULL,
+	criticality VARCHAR(20) NOT NULL,
+	PRIMARY KEY (history_id),
+	FOREIGN KEY (user_id) REFERENCES users(id),
+	FOREIGN KEY (error_id) REFERENCES errors(error_id)
+);
+
 CREATE TABLE status_list (
     id TINYINT NOT NULL AUTO_INCREMENT,
 	status VARCHAR(10) NOT NULL,
