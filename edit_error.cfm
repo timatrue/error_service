@@ -35,7 +35,18 @@
 			SELECT * FROM errors WHERE error_id = #errorNumber#;
 		</cfquery>
 		<cfquery datasource="error_service" name="status_list">
-			SELECT status FROM status_list;
+			SELECT status
+			FROM status_list
+			WHERE
+			<cfif error_details.status EQ 'New'>
+				st_new = 1;
+ 			<cfelseif error_details.status EQ 'Opened'>
+ 				st_opened = 1;
+ 			<cfelseif error_details.status EQ 'Solved'>
+ 				st_solved = 1;
+ 			<cfelseif error_details.status EQ 'Closed'>
+ 				st_closed = 1;
+			</cfif>
 		</cfquery>
 		<cfquery datasource="error_service" name="urgency_list">
 			SELECT urgency FROM urgency_list;

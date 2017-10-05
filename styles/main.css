@@ -50,6 +50,16 @@ body .error {
   color: #ff6666;
   font-size: 12px;
 }
+body .align-v {
+  display: inline-flex;
+  align-items: center;
+}
+body .align-v .sort-img {
+  width: 15px;
+  height: 15px;
+  padding: 0 5px;
+  cursor: pointer;
+}
 body input[type=submit] {
   background-color: #3498db;
   border: none;

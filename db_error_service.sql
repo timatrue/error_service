@@ -35,9 +35,14 @@ INSERT INTO errors (date_created, desc_short, desc_long, user_id, status, urgenc
 CREATE TABLE status_list (
     id TINYINT NOT NULL AUTO_INCREMENT,
 	status VARCHAR(10) NOT NULL,
+	st_new TINYINT(1),
+	st_opened TINYINT(1),
+	st_solved TINYINT(1),
+	st_closed TINYINT(1),
 	PRIMARY KEY (id)
 );
-INSERT INTO status_list (status) VALUES ('New'),('Opened'),('Solved'),('Closed');
+INSERT INTO status_list (status, st_new, st_opened, st_solved, st_closed) VALUES
+	('New',1,0,0,0),('Opened',1,1,1,0),('Solved',0,1,1,0),('Closed',0,0,1,1);
 
 CREATE TABLE urgency_list (
     id TINYINT NOT NULL AUTO_INCREMENT,

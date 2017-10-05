@@ -21,7 +21,9 @@
 		</cfif>
 	</cfif>
 	<cfquery datasource="error_service" name="status_list">
-		SELECT status FROM status_list;
+		SELECT status
+		FROM status_list
+		WHERE st_new = 1		
 	</cfquery>
 	<cfquery datasource="error_service" name="urgency_list">
 		SELECT urgency FROM urgency_list;

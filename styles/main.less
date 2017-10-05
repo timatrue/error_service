@@ -49,6 +49,8 @@ a {
 body {
 	width: 90%;
 	margin: auto;
+	font-size: @base-font-size;
+    font-family: 'Inconsolata','Helvetica', 'Arial', 'Sans-Serif', 'serif';
 	h1,h2,h3,h4 {
 		color: @darkgrey;
 	}
@@ -59,6 +61,16 @@ body {
 	.error {
 		color: @red;
 		font-size: @small-font-size;
+	}
+	.align-v{
+		display: inline-flex;
+		align-items: center;
+		.sort-img {
+			width: 15px;
+			height: 15px;
+			padding: 0 5px;
+			cursor: pointer;
+		}
 	}
 	input[type=submit] {
 		background-color: @blue;
@@ -73,8 +85,6 @@ body {
 	      background-color: @darkblue;
 	    }
 	}
-	font-size: @base-font-size;
-    font-family: 'Inconsolata','Helvetica', 'Arial', 'Sans-Serif', 'serif';
 	table {
 	    border-collapse: collapse;
 	    width: 100%;
