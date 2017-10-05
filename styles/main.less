@@ -16,113 +16,113 @@ a {
 }
 
 .header {
-	margin-top: 10px;
-	display: flex;
-	flex-flow: column;
-	align-items: center;
-  	.login-form__container div{
-	  	display: flex;
-	    flex-flow: row wrap;
-	    justify-content: flex-end;
-	    margin-bottom: 6px;
-  	}
-  	.login-form__fieldset {
-  		font-size: @medium-font-size;
-  		color: @mediumgrey;
-		border:1px solid @blue;
-	}
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+      .login-form__container div{
+          display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        margin-bottom: 6px;
+      }
+      .login-form__fieldset {
+          font-size: @medium-font-size;
+          color: @mediumgrey;
+        border:1px solid @blue;
+    }
 }
 
 .main-menu {
-	display: inline-flex;
-	ul {
-    	list-style-type: none;
-    	margin: 0;
-    	padding: 0;
-    	li {
-    		display: inline;
-    		margin: 5px 2px;
-    	}
-	}
+    display: inline-flex;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline;
+            margin: 5px 2px;
+        }
+    }
 }
 
 body {
-	width: 90%;
-	margin: auto;
-	font-size: @base-font-size;
+    width: 90%;
+    margin: auto;
+    font-size: @base-font-size;
     font-family: 'Inconsolata','Helvetica', 'Arial', 'Sans-Serif', 'serif';
-	h1,h2,h3,h4 {
-		color: @darkgrey;
-	}
-	.success {
-		color: @blue;
-		font-size: @small-font-size;
-	}
-	.error {
-		color: @red;
-		font-size: @small-font-size;
-	}
-	.align-v{
-		display: inline-flex;
-		align-items: center;
-		.sort-img {
-			width: 15px;
-			height: 15px;
-			padding: 0 5px;
-			cursor: pointer;
-		}
-	}
-	input[type=submit] {
-		background-color: @blue;
-	    border: none;
-	    color: @white;
-	    text-align: center;
-	    text-decoration: none;
-	    display: inline-block;
-	    padding: 8px 16px;
-	    cursor: pointer;
-	    &:hover {
-	      background-color: @darkblue;
-	    }
-	}
-	table {
-	    border-collapse: collapse;
-	    width: 100%;
-	}
-	td, th {
-	    border: 1px solid @lightgrey;
-	    text-align: left;
-	    padding: 8px;
-	}
-	tr:nth-child(even) {
-	    background-color: @lightgrey;
-	}
-	.edit-button{
-		padding: 0;
-		border: none;
-		background: none;
-		font-size: @small-font-size;
-		font-style: italic;
-		color: @mediumgrey;
-		cursor: pointer;
-		&:hover {
-			color: @black;
-		}
-	}
-	#error-container,#user-container{
-		display: flex;
-		flex-flow: column;
-		align-items: center;
-		#error-form,#user-form {
-			div {
-				display: flex;
-			    flex-flow: row wrap;
-			    justify-content: flex-end;
-			    margin-bottom: 6px;
-			    select, textarea {
-			    	min-width: 173px;
-			    }
-			}
-		}
-	}
+    h1,h2,h3,h4 {
+        color: @darkgrey;
+    }
+    .success {
+        color: @blue;
+        font-size: @small-font-size;
+    }
+    .error {
+        color: @red;
+        font-size: @small-font-size;
+    }
+    .align-v{
+        display: inline-flex;
+        align-items: center;
+        .sort-img {
+            width: 15px;
+            height: 15px;
+            padding: 0 5px;
+            cursor: pointer;
+        }
+    }
+    input[type=submit] {
+        background-color: @blue;
+        border: none;
+        color: @white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+        cursor: pointer;
+        &:hover {
+          background-color: @darkblue;
+        }
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    td, th {
+        border: 1px solid @lightgrey;
+        text-align: left;
+        padding: 8px;
+    }
+    tr:nth-child(even) {
+        background-color: @lightgrey;
+    }
+    .edit-button{
+        padding: 0;
+        border: none;
+        background: none;
+        font-size: @small-font-size;
+        font-style: italic;
+        color: @mediumgrey;
+        cursor: pointer;
+        &:hover {
+            color: @black;
+        }
+    }
+    #error-container,#user-container{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        #error-form,#user-form {
+            div {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-end;
+                margin-bottom: 6px;
+                select, textarea {
+                    min-width: 173px;
+                }
+            }
+        }
+    }
 }

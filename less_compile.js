@@ -8,6 +8,6 @@ const path = require('path');
         filename: path.resolve(src),
     }, function(e, output) {
         console.log(output.css);
-		fs.writeFile('./styles/main.css', output.css)
+        fs.writeFile('./styles/main.css', output.css)
     });
 })();
