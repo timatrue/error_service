@@ -22,5 +22,9 @@
 		<li>User could add new error with status: 'New' or 'Opened'.</li>
 		<li>Next, user could change the status of saved error with respect to general logic.</li>
 	</ul>
+	<h4>CSS details</h4>
+	<ul>
+		<li>As preprocessor was used LESS</li>
+	</ul>
 </div>
 	
