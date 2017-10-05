@@ -10,11 +10,6 @@
 @base-font-size: 16px;
 @medium-font-size: 14px;
 @small-font-size: 12px;
-
-a {
-  color: @darkblue;
-}
-
 .header {
     margin-top: 10px;
     display: flex;
@@ -54,6 +49,9 @@ body {
     h1,h2,h3,h4 {
         color: @darkgrey;
     }
+    a {
+        color: @darkblue;
+    }
     .success {
         color: @blue;
         font-size: @small-font-size;
@@ -62,7 +60,7 @@ body {
         color: @red;
         font-size: @small-font-size;
     }
-    .align-v{
+    .align-v {
         display: inline-flex;
         align-items: center;
         .sort-img {
@@ -97,7 +95,7 @@ body {
     tr:nth-child(even) {
         background-color: @lightgrey;
     }
-    .edit-button{
+    .edit-button {
         padding: 0;
         border: none;
         background: none;
@@ -109,7 +107,7 @@ body {
             color: @black;
         }
     }
-    #error-container,#user-container{
+    #error-container,#user-container {
         display: flex;
         flex-flow: column;
         align-items: center;

@@ -5,8 +5,8 @@
         FROM users
     </cfquery>
     <cfif user_list.RecordCount EQ 0>
-         <p style="text-align:center;">No users registered</p>
-     <cfelse>
+        <p style="text-align:center;">No users registered</p>
+    <cfelse>
         <h4>Users' list:</h4>
         <cfinclude template="includes/user_table_main.cfm" >
     </cfif>

@@ -15,7 +15,6 @@
         </cfif>
         <cfreturn aErrorMessages>
     </cffunction>
-
     <!---doLogin() method --->
     <cffunction name="doLogin" access="public" output="false" returntype="boolean">
         <cfargument name="userEmail" type="string" required="true" />
@@ -40,11 +39,9 @@
         </cfif>
         <cfreturn isUserLoggedIn>
     </cffunction>
-    
     <!---doLogout() method --->
     <cffunction name="doLogout" access="public" output="false" returntype="void">
         <cfset structDelete(session,'loggedUser')>
         <cflogout >
     </cffunction>
-
 </cfcomponent>

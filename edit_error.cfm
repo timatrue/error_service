@@ -66,7 +66,6 @@
             urgency = error_details.urgency,
             criticality = error_details.criticality
         } >
-
         <cfquery datasource="error_service" name="urgency_list">
             SELECT urgency FROM urgency_list;
         </cfquery>
@@ -106,10 +105,10 @@
     </cfif>
     <cfif error_history.RecordCount EQ 0>
         <p style="text-align:center;"> Error doesn't have history</p>
-     <cfelse>
-         <h4>Error's history':</h4>
+    <cfelse>
+        <h4>Error's history':</h4>
         <cfinclude template="includes/error_table_history.cfm" >
-     </cfif>
+    </cfif>
     <cfset variables.errorFormEditComplete = false>  
 <cfelse>
     <cflocation url="/error_service/index.cfm?noaccess" >

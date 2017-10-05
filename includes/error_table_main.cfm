@@ -6,14 +6,14 @@
         <th>
             <div class="align-v">
                 <span>Error ID</span>
-                <a href="/error_service/error_list.cfm?sort=error_id&"><img class="sort-img" src="images/sort_small.jpg" ></img></a>
+                <a href="/error_service/error_list.cfm?sort=error_id"><img class="sort-img" src="images/sort_small.jpg" ></img></a>
             </div>
         </th>
         <th>
             <div class="align-v">
                 <span>Created</span>
                 <a href="/error_service/error_list.cfm?sort=date_created"><img class="sort-img" src="images/sort_small.jpg" ></img></a>
-                </div>
+            </div>
         </th>
         <th>
             <div class="align-v">

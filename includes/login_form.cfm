@@ -24,9 +24,6 @@
     <cfif structKeyExists(session,'loggedUser')>
         <span><cfoutput > Logged as  #session.loggedUser.userEmail# </cfoutput></span>
         <span><a href="user_profile.cfm">Your profile</a> <a href="/error_service/index.cfm?logout">Logout</a></span>
-        <!---<cfif isUserInRole('admin')>
-            <span><a href="">admin</a></span>
-        </cfif>--->
     <cfelse>
     <div class="login-form__container">
         <div>
@@ -40,7 +37,7 @@
         <div>
             <cfinput type="submit" name="fld_submitLogin" id="fld_submitLogin" value="Login" />
         </div>
-     </div>
-     </cfif>
+    </div>
+    </cfif>
     </fieldset>
 </cfform>
