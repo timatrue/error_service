@@ -73,7 +73,12 @@ CREATE TABLE critical_list (
 );
 INSERT INTO critical_list (criticality) VALUES ('Emergency'),('Crucial'),('Not crucial'),('Changes requested');
 
-
+CREATE TABLE role_list (
+    id TINYINT NOT NULL AUTO_INCREMENT,
+	role VARCHAR(20) NOT NULL,
+	PRIMARY KEY (id)
+);
+INSERT INTO role_list (role) VALUES ('admin'),('user');
 
 
 
